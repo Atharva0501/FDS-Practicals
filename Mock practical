@@ -1,0 +1,57 @@
+n=11
+r=[]
+for i in range(n):
+  runs=int(input(f"enter runs of {i+1}\t"))
+  r.append(runs)
+print(" runs of the players are ",r)
+def avg(score):
+  sumscore=0
+  count=0
+  for i in score:
+    sumscore=i+sumscore
+    count=count+1
+  average = sumscore/count
+  return average
+average=avg(r)
+print("average score of team is",average)
+def highest():
+  highest_score = None 
+  if i !=-999:
+       for score in r:
+          if(highest_score is None or score > highest_score):
+            highest_score = score
+  print(' The highest score is :', highest_score)
+highest()
+def lowest():
+   low = r[0]
+   for i in range(len(r)):
+     if r[i] < low:
+        low = r[i]
+        print(" The lowest score is",low)
+lowest()
+a=[]
+def d():
+  for score in r:
+    if score > 50:
+     a.append(score)
+     return(a)
+    print(" Count of players who score more than 50 runs is ",len(a))
+d()   
+
+def f():
+   max = 0
+   res = r[0]
+   count = 0
+   for i in r:
+     for j in range(1,len(r)):
+       if (r[j]==r[j-1]):
+         count= count + 1
+         if count> max:
+           max = count
+           res= r[j-1]
+           return res 
+print(" The score with highest frequency is",f())
+f()
+
+    
+
